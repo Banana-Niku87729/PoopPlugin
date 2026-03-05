@@ -5,7 +5,7 @@ enabled: true
 
 # Ko-Fi の Webhook 検証トークン（Ko-Fi管理画面 > Webhooks で確認）
 # 空白の場合はトークン検証をスキップします（非推奨）
-kofi-webhook-secret: "d73396c2-8dd9-4908-9bdf-c392c06ec425"
+kofi-webhook-secret: ""
 
 # Ko-Fi Webhook を受信する HTTP サーバーのポート番号
 # サーバーのファイアウォールでこのポートを開放してください
@@ -29,3 +29,4 @@ kofi-token: ""
 #   PlayerName:
 #     rank: Plus
 #     uuid: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
