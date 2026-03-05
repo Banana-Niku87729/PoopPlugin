@@ -1,0 +1,16 @@
+# ハードコアシステム設定ファイル
+
+# ハードコアワールドのリスト
+# プレイヤーがこれらのワールドで死亡すると、二度と入れなくなります
+hardcore-worlds:
+  - "hardcore_survival_world"
+  - "hardcore_survival_nether"
+  - "hardcore_survival_end"
+
+# Hubワールド名
+# プレイヤーが死亡した後、このワールドにリスポーンします
+hub-world: "hub"
+
+# プレイヤーごとの死亡記録
+# 自動的に記録されます（手動編集非推奨）
+player-deaths: {}

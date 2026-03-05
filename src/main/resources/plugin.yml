@@ -1,0 +1,146 @@
+name: PoopPlugin
+version: ${project.version}
+main: com.example.poopplugin.PoopPlugin
+api-version: 1.21
+author: Rec877
+description: Poop Never Dies!!!!!1111
+depend: [floodgate]
+softdepend: [ProtocolLib, LuckPerms]
+
+commands:
+  ec:
+    description: エンダーチェストを開く
+    usage: /ec
+    permission: poopplugin.enderchest
+    aliases: [enderchest]
+
+  enderchest:
+    description: エンダーチェストを開く
+    usage: /enderchest
+    permission: poopplugin.enderchest
+
+  toggle:
+    description: 各種設定のON/OFFを切り替え
+    usage: /toggle <platform|cpskick>
+    permission: poopplugin.toggle
+    aliases: [tg]
+
+  watermark:
+    description: アクションバーのウォーターマークを設定
+    usage: /watermark <0|1|2|3|4> [カスタムテキスト]
+    aliases: [wm]
+
+  coin:
+    description: Coin管理コマンド
+    usage: /coin [add|remove|set|give|take|check] [プレイヤー] [金額]
+    aliases: [coins, money]
+
+  hardcore:
+    description: ハードコアシステム管理コマンド
+    usage: /hardcore <add|remove|list|sethub|reset|check> [引数]
+    permission: poopplugin.hardcore.use
+    aliases: [hc]
+
+  hardcorehearts:
+    permission: "hardcorehearts.command"
+    description: "Hardcore Hearts"
+    usage: "/hardcorehearts [toggle]"
+
+  protect:
+    description: 建築保護エリアの管理
+    usage: /protect <pos1|pos2|create|delete|addmember|removemember|flag|info|list|priority|tp> [引数]
+    permission: poopplugin.protect.use
+    aliases: [region, rg]
+
+  # ── 有料ランク購入コマンド ──────────────────────
+  rank_buy:
+    description: 有料ランクの購入手順を表示し、購入用メールアドレスを発行する
+    usage: /rank_buy
+    permission: poopplugin.rank.buy
+
+  buyname_change:
+    description: 購入用メールアドレスのユーザー名部分を変更する
+    usage: /buyname_change <ユーザー名>
+    permission: poopplugin.rank.buy
+
+  own:
+    description: 自分のワールドを管理する
+    usage: /own <create|list|ban|unban|give|gamemode> [引数]
+    permission: poopplugin.world.use
+    aliases: [myworld]
+
+  join:
+    description: ワールドコードでワールドに参加する
+    usage: /join <ワールドコード>
+    permission: poopplugin.world.join
+
+  settings:
+    description: 現在いるワールドの設定GUIを開く
+    usage: /settings
+    permission: poopplugin.world.settings
+
+  account:
+    description: アカウント情報を表示する
+    usage: /account <プレイヤー名>
+    permission: poopplugin.account.view
+
+permissions:
+  poopplugin.enderchest:
+    description: エンダーチェストコマンドを使用できる
+    default: true
+
+  poopplugin.toggle:
+    description: プラットフォーム表示設定を変更できる
+    default: true
+
+  poopplugin.coin.admin:
+    description: Coinの追加・削除・設定ができる
+    default: op
+
+  poopplugin.coin.use:
+    description: Coin機能を使用できる
+    default: true
+
+  poopplugin.hardcore.use:
+    description: ハードコア機能を使用できる
+    default: true
+
+  poopplugin.hardcore.admin:
+    description: ハードコアシステムの管理ができる
+    default: op
+
+  poopplugin.protect.use:
+    description: 保護エリア機能を使用できる
+    default: true
+
+  poopplugin.protect.admin:
+    description: すべての保護エリアを管理できる
+    default: op
+
+  poopplugin.protect.bypass:
+    description: すべての保護エリアを無視できる
+    default: op
+
+  poopplugin.rank.buy:
+    description: ランク購入コマンドを使用できる
+    default: true
+
+  poopplugin.world.use:
+    description: /own コマンドを使用できる
+    default: true
+
+  poopplugin.world.join:
+    description: /join コマンドでワールドに参加できる
+    default: true
+
+  poopplugin.world.settings:
+    description: /settings コマンドを使用できる
+    default: true
+
+  poopplugin.world.admin:
+    description: すべてのownワールドを管理できる（スーパーAdmin用）
+    default: op
+
+  poopplugin.account.view:
+    description: 他プレイヤーのアカウント情報を表示できる
+    default: true
